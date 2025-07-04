@@ -262,3 +262,23 @@ body.life-home {
 .life-home-button:hover {
   background-color: #444;
 }
+.falling-emoji {
+  position: fixed;
+  top: -50px;
+  font-size: 50px;
+  z-index: 999;
+  animation: fall 4s linear infinite;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

@@ -28,4 +28,15 @@
       LIFE
     </button>
   </body>
+  <script>
+    const NUM_ICONS = 25;
+    for (let i = 0; i < NUM_ICONS; i++) {
+      const brain = document.createElement("div");
+      brain.className = "falling-emoji";
+      brain.textContent = "🧠";
+      brain.style.left = Math.random() * 100 + "vw";
+      brain.style.animationDelay = Math.random() * 4 + "s";
+      document.body.appendChild(brain);
+    }
+  </script>
 </html>
