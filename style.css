@@ -200,3 +200,65 @@ header .logo {
 header img {
   height: 36px;
 }
+/* LIFE 메인화면 전체 배경과 중앙 정렬 */
+body.life-home {
+  margin: 0;
+  background: #fffdfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* LIFE 텍스트 스타일 */
+.life-word {
+  display: flex;
+  gap: 60px;
+  font-size: 10rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* 각 글자 공통 효과 */
+.life-letter {
+  color: #222;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.life-letter:hover {
+  transform: scale(1.1);
+}
+
+/* 각 글자별 호버 색상 */
+.life-letter.L:hover {
+  color: #e91e63;
+} /* 핑크 */
+.life-letter.I:hover {
+  color: #2196f3;
+} /* 파랑 */
+.life-letter.F:hover {
+  color: #4caf50;
+} /* 초록 */
+.life-letter.E:hover {
+  color: #9c27b0;
+} /* 보라 */
+.life-home-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  padding: 10px 16px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  z-index: 999;
+  transition: background-color 0.2s;
+}
+
+.life-home-button:hover {
+  background-color: #444;
+}
