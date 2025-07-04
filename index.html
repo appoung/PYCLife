@@ -2,19 +2,31 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <title>LIFE</title>
+    <title>송쓰 유튜브</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="life-word">
-      <span class="life-letter L" onclick="location.href='love.html'">L</span>
-      <span class="life-letter I" onclick="location.href='intelligence.html'"
-        >I</span
-      >
-      <span class="life-letter F" onclick="location.href='fun.html'">F</span>
-      <span class="life-letter E" onclick="location.href='evolution.html'"
-        >E</span
-      >
+    <header class="yt-header">
+      <div class="left">
+        <img
+          class="logo"
+          src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg"
+          alt="YouTube 로고"
+        />
+      </div>
+      </div>
+    </header>
+    <h2 class="channel-title">Search</h2>
+    <div class="search-area">
+      <input type="text" id="searchInput" class="search-input" />
+      <button class="search-btn" onclick="search()">🔍</button>
     </div>
+
+    <script>
+      function search() {
+        // 검색 후 이동할 페이지 설정
+        window.location.href = "youtube.html"; // 또는 love.html 등
+      }
+    </script>
   </body>
 </html>

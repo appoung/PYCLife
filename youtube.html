@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>송쓰 클래스 LIFE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    .search-input {
+      width: 300px;
+      height: 32px;
+      border: 1px solid #ccc;
+      border-radius: 2px 0 0 2px;
+      padding: 4px 8px;
+      font-size: 1rem;
+    }
+
+    .search-btn {
+      height: 40px;
+      font-size: 1rem;
+      padding: 0 12px;
+      border: 1px solid #ccc;
+      border-left: none;
+      border-radius: 2px 2px 2px 0;
+      background: #eee;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <header class="yt-header">
+      <div class="left">
+        <img
+          class="logo"
+          src="https://www.gstatic.com/youtube/img/branding/youtubelogo/svg/youtubelogo.svg"
+          alt="YouTube 로고"
+        />
+      </div>
+      <div class="center">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="song's youtube channel"
+        />
+        <button class="search-btn">🔍</button>
+      </div>
+      <div class="right">
+        <button class="notif-btn" title="알림">
+          🔔
+          <span class="notif-badge">3</span>
+        </button>
+        <img
+          class="profile"
+          src="https://www.gstatic.com/images/branding/product/1x/avatar_circle_blue_512dp.png"
+          alt="프로필"
+        />
+      </div>
+    </header>
+    <h2 class="channel-title">Song's Youtube Channel</h2>
+    <div class="yt-grid">
+      <div class="yt-thumb" onclick="location.href='love.html'">
+        <img src="./images/love.png" alt="Love" />
+        <div class="yt-meta">
+          <div class="yt-title">❤️ Love – 따뜻한 분위기</div>
+          <div class="yt-channel">송쓰클래스 · 조회수 512회 · 3일 전</div>
+        </div>
+      </div>
+
+      <div class="yt-thumb" onclick="location.href='intelligence.html'">
+        <img src="./images/intelligence.png" alt="Intelligence" />
+        <div class="yt-meta">
+          <div class="yt-title">🧠 Intelligence – 함께 성장하는 순간</div>
+          <div class="yt-channel">송쓰클래스 · 조회수 411회 · 2일 전</div>
+        </div>
+      </div>
+
+      <div class="yt-thumb" onclick="location.href='fun.html'">
+        <img src="./images/fun.png" alt="Fun" />
+        <div class="yt-meta">
+          <div class="yt-title">😄 Fun – 배움이 즐거운 순간</div>
+          <div class="yt-channel">송쓰클래스 · 조회수 388회 · 1일 전</div>
+        </div>
+      </div>
+
+      <div class="yt-thumb" onclick="location.href='evolution.html'">
+        <img src="./images/evolution.png" alt="Evolution" />
+        <div class="yt-meta">
+          <div class="yt-title">🔄 Evolution – 진화하는 나</div>
+          <div class="yt-channel">송쓰클래스 · 조회수 573회 · 1시간 전</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -282,3 +282,195 @@ body.life-home {
     opacity: 0;
   }
 }
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.yt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 24px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.yt-header .logo {
+  height: 24px;
+}
+.search-area {
+  margin-top: 30px;
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.search-input {
+  width: 400px;
+  height: 60px;
+  border: 1px solid #ccc;
+  border-radius: 2px 0 0 2px;
+  padding: 4px 8px;
+  font-size: 2.6rem;
+}
+
+.search-btn {
+  height: 60px;
+  font-size: 2.6rem;
+  padding: 0 12px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 2px 2px 2px 0;
+  background: #eee;
+  cursor: pointer;
+}
+
+.profile {
+  height: 32px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.yt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  padding: 40px 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.yt-thumb {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.yt-thumb:hover {
+  transform: translateY(-6px);
+}
+
+.yt-thumb img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.yt-meta {
+  padding: 10px 6px 0;
+  line-height: 1.4;
+}
+
+.yt-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0f0f0f;
+  margin-bottom: 4px;
+}
+
+.yt-channel {
+  font-size: 0.85rem;
+  color: #606060;
+}
+.yt-title {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.yt-desc {
+  font-size: 0.9rem;
+  color: #606060;
+}
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.notif-btn {
+  padding-top: 20px;
+  margin-right: 20px;
+  position: relative;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.notif-btn:hover {
+  color: #000;
+}
+
+.notif-badge {
+  margin-top: 10px;
+  margin-right: 10px;
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 12px;
+  pointer-events: none;
+}
+.channel-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin: 32px 0 12px;
+  color: #0f0f0f;
+  font-family: "Roboto", sans-serif;
+}
+.bold-pink {
+  color: #e91e63;
+  font-weight: bold;
+}
+
+.underline-soft {
+  text-decoration: underline;
+  text-decoration-color: #ffb6c1;
+  text-decoration-thickness: 2px;
+}
+.bold-blue {
+  color: #3f51b5;
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+.fun-animate {
+  color: #ff9800;
+  font-weight: bold;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+.bold-purple {
+  color: #9c27b0;
+  font-weight: bold;
+}
+
+.glow-purple {
+  color: #9c27b0;
+  font-weight: bold;
+  text-shadow: 0 0 5px #e1bee7;
+}
+.search-input::placeholder {
+  color: #0b0b0b;
+}
