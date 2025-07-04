@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ssongss OS v2.0</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <header>
+    <div class="logo">
+      <img
+        src="https://www.choisun.co.kr/images/common/logo_dyb.svg"
+        alt="DYB 로고"
+      />
+      <span>평촌 캠퍼스</span>
+      <div style="padding-left: 15px">
+        <span>L</span>
+        <span>I</span>
+        <span>F</span>
+        <span>E</span>
+      </div>
+      <span style="padding-left: 1100px">Made by 한병준</span>
+    </div>
+  </header>
+  <body class="intro">
+    <div class="container">
+      <h1 id="typing"></h1>
+      <p>나의 송쓰 클래스 진화기 🚀</p>
+      <button onclick="location.href='love.html'">▶ Start My Evolution</button>
+    </div>
+    <script>
+      const text = "Ssongss OS v2.0 – 업그레이드를 시작합니다...";
+      let i = 0;
+      const typing = document.getElementById("typing");
+      function type() {
+        if (i < text.length) {
+          typing.innerHTML += text.charAt(i);
+          i++;
+          setTimeout(type, 80);
+        }
+      }
+      window.onload = type;
+    </script>
+  </body>
+</html>

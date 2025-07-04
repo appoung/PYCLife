@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Evolution</title>
+    <link rel="stylesheet" href="style.css" />
+    <style></style>
+  </head>
+  <body class="evolution">
+    <header>
+      <div class="logo">
+        <img
+          src="https://www.choisun.co.kr/images/common/logo_dyb.svg"
+          alt="DYB 로고"
+        />
+        <span>평촌 캠퍼스</span>
+        <div style="padding-left: 15px">
+          <span>L</span>
+          <span>I</span>
+          <span>F</span>
+          <span style="color: rgb(112, 93, 252)">E</span>
+        </div>
+        <span style="padding-left: 1100px">Made by 한병준</span>
+      </div>
+    </header>
+
+    <main>
+      <div class="evolution-container">
+        <h1>🔄 Evolution</h1>
+        <p>송쓰를 통해 성장하는 순간!</p>
+
+        <div class="character-box">
+          <div id="level">Lv. 1: 호기심 많은 병준이</div>
+          <div class="xp-bar"><div id="xp-fill" class="xp-fill"></div></div>
+          <div id="success" class="hidden">
+            🎉 진화 완료! Lv. 2: 성장한 병준이
+          </div>
+        </div>
+
+        <button onclick="location.href='end.html'">▶ 계속</button>
+      </div>
+    </main>
+
+    <script>
+      const xpFill = document.getElementById("xp-fill");
+      const levelText = document.getElementById("level");
+      const successText = document.getElementById("success");
+
+      function animateXP(duration = 3000) {
+        const start = performance.now();
+        const totalWidth = 100;
+
+        function step(now) {
+          const progress = Math.min((now - start) / duration, 1);
+          xpFill.style.width = progress * totalWidth + "%";
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            onLevelUp();
+          }
+        }
+
+        requestAnimationFrame(step);
+      }
+
+      function onLevelUp() {
+        levelText.textContent = "Lv. 2: 성장한 병준이";
+        successText.classList.remove("hidden");
+
+        const script = document.createElement("script");
+        script.type = "module";
+        script.textContent = `
+          import confetti from 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.module.mjs';
+          confetti();
+        `;
+        document.body.appendChild(script);
+      }
+
+      animateXP();
+    </script>
+  </body>
+</html>
